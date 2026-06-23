@@ -1,0 +1,9 @@
+CREATE TABLE users (
+	`user_id` INT PRIMARY KEY,
+	`user_name` VARCHAR (100) UNIQUE,
+    `pass` VARCHAR (10) NOT NULL,
+    `email` VARCHAR (50) UNIQUE,
+    `status` VARCHAR (10) DEFAULT 'active'
+);
+
+ALTER TABLE users ADD CONSTRAINT check_stt CHECK (`status` IN ('ative', 'inactive'));
