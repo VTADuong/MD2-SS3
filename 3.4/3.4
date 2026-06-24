@@ -7,3 +7,5 @@ CREATE TABLE users (
 );
 
 ALTER TABLE users ADD CONSTRAINT check_stt CHECK (`status` IN ('ative', 'inactive'));
+
+DROP TABLE users;
